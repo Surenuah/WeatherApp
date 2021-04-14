@@ -1,0 +1,25 @@
+﻿<Window x:Class="WpfApp5.ViewWeather"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        xmlns:local="clr-namespace:WpfApp5"
+        mc:Ignorable="d"
+        Title="WeatherService" Height="450" Width="800">
+    <Grid>
+        <Image Stretch="Fill" Source="https://static.2gis.com/i/8089.jpg"></Image>
+        <Border MaxWidth="400" Background="Violet" MaxHeight="300" CornerRadius="8">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="30" ShadowDepth="0" Color="Black"></DropShadowEffect>
+            </Border.Effect>
+            <StackPanel>
+                <TextBlock FontSize="32" Margin="10 10 0 0" Text="Выберите свой город:"></TextBlock>
+                <TextBox x:Name="txtChooseCityBox" FontSize="30" Margin="10" Style="{DynamicResource MaterialDesignOutlinedTextFieldTextBox}"></TextBox>
+                <Button Width="200" Click="Button_Click">Просмотреть погоду</Button>
+                <TextBox x:Name="txtBox"></TextBox>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
